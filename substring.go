@@ -1,4 +1,4 @@
-package substr
+package str
 
 import "strings"
 
