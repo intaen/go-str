@@ -31,9 +31,25 @@ func GetCountryCode(phn string) string {
 	return str.GetStr(phn, -1, 3)
 }
 
+func GetStudentMiddleName(name string, firstlen, lastlen int) string {
+	return str.SubStr(name, firstlen, lastlen)
+}
+
+func GetLastPhoneNumber(phn string) string {
+	return str.GetStr(phn, 1, 4)
+}
+
 func main() {
-	code := GetCountryCode("+628593980XXXX")
-	fmt.Println(code)
-    // Result: +62
+	// Example to get first string
+	fmt.Println(GetCountryCode("+628593980XXXX"))
+	// Result: +62
+
+	// Example to get sub string
+	fmt.Println(GetStudentMiddleName("John Doe Smith", 5, 6))
+	// Result: Doe
+
+	// Example to get last string
+	fmt.Println(GetLastPhoneNumber("+628593980XXXX"))
+	// Result: XXXX
 }
 ```
