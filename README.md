@@ -34,5 +34,6 @@ func GetCountryCode(phn string) string {
 func main() {
 	code := GetCountryCode("+628593980XXXX")
 	fmt.Println(code)
+    // Result: +62
 }
 ```
