@@ -1,7 +1,7 @@
 # go-str
 
 Simple library to cut-off string. With this, you can get first, sub (middle), or last string as simple as that.
-To get first string, use GetStr with -1 for parameter pos; last string, use GetStr with 1 for parameter pos; sub
+To get first string, use GetStr with 1 for parameter pos; last string, use GetStr with -1 for parameter pos; sub
 string, use SubStr and send total string in first and last position you want to cut.
 
 ## Installation
@@ -28,7 +28,7 @@ import (
 )
 
 func GetCountryCode(phn string) string {
-	return str.GetStr(phn, -1, 3)
+	return str.GetStr(phn, 1, 3)
 }
 
 func GetStudentMiddleName(name string, firstlen, lastlen int) string {
@@ -36,7 +36,7 @@ func GetStudentMiddleName(name string, firstlen, lastlen int) string {
 }
 
 func GetLastPhoneNumber(phn string) string {
-	return str.GetStr(phn, 1, 4)
+	return str.GetStr(phn, -1, 4)
 }
 
 func main() {
